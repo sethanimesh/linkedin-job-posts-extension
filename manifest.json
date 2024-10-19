@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "LinkedIn Job Filter",
+  "version": "1.1",
+  "description": "Hides irrelevant posts and displays only job openings on LinkedIn.",
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.linkedin.com/feed/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
